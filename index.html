@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body style="background-image: url(https://img.freepik.com/free-photo/yellow-distressed-wall-texture-background_1017-18215.jpg?size=626&ext=jpg); background-size: cover;">
+    <h1 style="text-align: center;" >Temperature Teller - The Magic Of Numbers</h1>
+<img  style=" margin-left: 660px; margin-top: 100px; border-radius: 300px;" alt=""  id="myImg" class="a" src="" width="250px" height="250px">
+<h1 style="text-align: center; margin-top: 50px;" id="abcd"></h1>
+<div style="width: 350px; margin-left: 560px;">
+<label for="abc">Degrees Temperature To Fahrenheit</label>
+<input id="abc" class="form-control" type="number">
+<small class="form-text text-muted"><strong>Please kindly only enter in degrees, otherwise, you will get the incorrect value.</strong>
+    <br>
+    <hr>
+<button onclick="myFunction()" class="btn btn-primary">Try it</button>
+</div>
+<script>
+function myFunction() {
+  let i = document.getElementById('abc').value
+  let b = document.getElementById('abcd')
+  console.log(i)
+  if (i>=32){
+    b.innerHTML= i*9/5+32 +'°F';
+   let b = document.getElementById("myImg").src = "https://cdn2.iconfinder.com/data/icons/coloured-weather-icon-set-svg/100/Coloured_Weather_Icon_Set_by_ViconsDesign-12-512.png";
+  }
+  if (i<=10) {
+    b.innerHTML= i*9/5+32 +'°F';
+    document.getElementById("myImg").src = "https://cdn3.iconfinder.com/data/icons/disaster-and-weather-conditions/48/25-512.png";
+  }
+  if (i<20 && i>10){
+    b.innerHTML= i*9/5+32 +'°F';
+    let n = document.getElementById("myImg").src = "https://c8.alamy.com/comp/JH9AY3/temperature-icon-clip-art-narrow-range-mercury-thermometer-shows-cool-JH9AY3.jpg"
+  }
+  if (i>=20 && i<=22){
+    b.innerHTML= i*9/5+32 +'°F'+'- Room Temperature';
+    let n = document.getElementById("myImg").src = "https://thumbs.dreamstime.com/b/thermostat-logo-silhouette-home-climate-control-outline-icon-indoor-air-circulation-black-illustration-room-temperature-flat-178681623.jpg"
+  }
+  
+}
+</script>
+<style>
+     .a {
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 300px;
+                  transition: transform .7s;
+              }
+     .a:hover{
+                -ms-transform: scale(1.5);
+      -webkit-transform: scale(1.5); 
+      transform: scale(1.5);
+              }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
